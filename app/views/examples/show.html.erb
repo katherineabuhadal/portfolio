@@ -1,0 +1,7 @@
+<h2><%= @example.title %></h2>
+
+<p>
+<h4><%= @example.description %></h4>
+<div><%= image_tag @example.url %></div>
+<%= link_to "Edit", [:edit, @example] %>
+<%= link_to "Delete", @example, method: :delete %>

@@ -1,7 +1,14 @@
-<h1>New</h1>
+<h1>Katherine Abu Hadal</h1>
 
-<%= link_to "Add new example", [:new, :example] %>
+<%= tabs_tag do |tab| %>
+  <%= tab.home "Home", root_path %>
+  <%= tab.blog "Blog", "/blog"  %>
+  <%= tab.contact "Contact", "/contact"  %>
+  <%= tab.resume "Resume", "/resume" %>
+<% end %>
+ 
+<h3><%= link_to "Add new example", [:new, :example] %></h3>
 
 <% @examples.each do |example| %>
-<%= example.title %>
+  <p><%= link_to example.title, example %></p>
 <% end %>

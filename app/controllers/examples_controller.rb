@@ -4,6 +4,10 @@ def index
 
 end
 
+def show
+  @example = Example.find(params[:id])
+end
+
 def new
   @example = Example.new
 end
@@ -19,7 +23,10 @@ end
 def update
 end
 
-def delete
+def destroy
+  @example = Example.find(params[:id])
+  @example.destroy
+  redirect_to root_path
 end
 
 private
