@@ -1,0 +1,7 @@
+<h1>New</h1>
+
+<%= link_to "Add new example", [:new, :example] %>
+
+<% @examples.each do |example| %>
+<%= example.title %>
+<% end %>
