@@ -1,8 +1,6 @@
-<h1>My heading</h1>
+<div class="page">
 
-<h3><%= link_to "Add new example", [:new, :example] %></h3>
-
-
+<div class="titles">Projects</div>
 <% @examples.each do |example| %>
 
   <div class="examples">
@@ -14,4 +12,18 @@
     </div>
   </div>
 <% end %>
+
+</div>
+
+
+
+<div class="titles">Contact</div>
+
+<h3><%= link_to "Add new example", [:new, :example] %></h3>
+
+<p>
+My contact info
+</p>
+</div>
+
 

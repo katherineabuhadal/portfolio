@@ -1,22 +1,26 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Katherine Abu Hadal</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
+<title>Katherine Abu Hadal</title>
+<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+<%= csrf_meta_tags %>
 </head>
 <body>
 <div id="container">
 
-<div id="logo"><%= link_to "Home[logo]", "/"  %></div>
+  <div id="header">
+    <div id="logo">
+      <%= link_to "Home[logo]", "/" %>
+    </div>
 
-<div class="menu">
-  <ul class="nav_menu">
-    <li class ="menu_link"><%= link_to "Articles", "/blog" %></li>
-    <li class ="menu_link"><%= link_to "Contact", "/contact" %></li>
-    <li class ="menu_link"><%= link_to "Resume", "/resume" %></li>
-  </ul>
+    <div class="menu">
+      <ul class="nav_menu">
+        <li class ="menu_link"><%= link_to "Articles", "/blog" %></li>
+        <li class ="menu_link"><%= link_to "Contact", "/contact" %></li>
+        <li class ="menu_link"><%= link_to "Resume", "/resume" %></li>
+      </ul>
+    </div>
 </div>
 
 

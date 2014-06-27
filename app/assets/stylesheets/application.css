@@ -20,7 +20,7 @@ body {
 }
 
 #container {
-  width: 70em;
+  width: 80em;
   margin-left: auto;
   margin-right: auto;
   margin-top: 2em;
@@ -35,18 +35,21 @@ a:hover {
   color: #CCFF33;
 }
 
+#header {
+}
+
+
 #logo {
-  display: inline;
+  height: 8em;
+  background: red;
+  float: left;
 }
 
 .menu {
-  display: inline;
-  text-align: right;
- 
+ float: right;
 }
 
 .nav_menu {
-  float: right;
   font-size: 2em;
 }
 
@@ -54,12 +57,36 @@ li {
   display: inline;
 }
 
+.page {
+  display: block;
+}
+
 .examples {
   float: left;
 }
 
+.examples_title {
+font-size: 1.5em;
+opacity: 0.4;
+}
+
 .examples_image {
-  width: 300px;
-  margin: 5px;
+  width: 25.5em;
+  height: 20em;
+  margin-right: 1em;
   background: gray;
 }
+
+.titles {
+  font-size: 1.5em;
+  font-weight: bold;
+  padding-bottom: .5em;
+}
+
+p {
+  font-size: 1em;
+}
+
+
+
+
