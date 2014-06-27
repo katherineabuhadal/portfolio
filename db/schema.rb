@@ -11,7 +11,33 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140622134516) do
+ActiveRecord::Schema.define(version: 20140627143941) do
+
+  create_table "blogit_comments", force: true do |t|
+    t.string   "name",       null: false
+    t.string   "email",      null: false
+    t.string   "website"
+    t.text     "body",       null: false
+    t.integer  "post_id",    null: false
+    t.string   "state"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "blogit_comments", ["post_id"], name: "index_blogit_comments_on_post_id"
+
+  create_table "blogit_posts", force: true do |t|
+    t.string   "title",                            null: false
+    t.text     "body",                             null: false
+    t.string   "state",          default: "draft", null: false
+    t.integer  "comments_count", default: 0,       null: false
+    t.integer  "blogger_id"
+    t.string   "blogger_type"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "blogit_posts", ["blogger_type", "blogger_id"], name: "index_blogit_posts_on_blogger_type_and_blogger_id"
 
   create_table "examples", force: true do |t|
     t.string   "title",       null: false

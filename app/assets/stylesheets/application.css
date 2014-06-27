@@ -13,3 +13,53 @@
  *= require_tree .
  *= require_self
  */
+
+body {
+  font-family: Helvetica;
+  
+}
+
+#container {
+  width: 70em;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2em;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  color: #CCFF33;
+}
+
+#logo {
+  display: inline;
+}
+
+.menu {
+  display: inline;
+  text-align: right;
+ 
+}
+
+.nav_menu {
+  float: right;
+  font-size: 2em;
+}
+
+li {
+  display: inline;
+}
+
+.examples {
+  float: left;
+}
+
+.examples_image {
+  width: 300px;
+  margin: 5px;
+  background: gray;
+}

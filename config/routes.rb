@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
- root "examples#index" 
+ root to:"examples#index" 
  resources :examples, only: [:new, :show, :create, :edit, :update, :destroy]
  # Example resource route (maps HTTP verbs to controller actions automatically):
   #   resources :products

@@ -7,10 +7,23 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+<div id="container">
 
-<%= link_to "Home[logo]", root_path %>
+<div id="logo"><%= link_to "Home[logo]", "/"  %></div>
+
+<div class="menu">
+  <ul class="nav_menu">
+    <li class ="menu_link"><%= link_to "Articles", "/blog" %></li>
+    <li class ="menu_link"><%= link_to "Contact", "/contact" %></li>
+    <li class ="menu_link"><%= link_to "Resume", "/resume" %></li>
+  </ul>
+</div>
+
+
+
+
 
 <%= yield %>
-
+</div>
 </body>
 </html>

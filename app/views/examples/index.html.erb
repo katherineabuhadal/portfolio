@@ -1,14 +1,17 @@
-<h1>Katherine Abu Hadal</h1>
+<h1>My heading</h1>
 
-<%= tabs_tag do |tab| %>
-  <%= tab.home "Home", root_path %>
-  <%= tab.blog "Blog", "/blog"  %>
-  <%= tab.contact "Contact", "/contact"  %>
-  <%= tab.resume "Resume", "/resume" %>
-<% end %>
- 
 <h3><%= link_to "Add new example", [:new, :example] %></h3>
 
+
 <% @examples.each do |example| %>
-  <p><%= link_to example.title, example %></p>
+
+  <div class="examples">
+    <div class="examples_title">
+      <%= link_to example.title, example %> 
+    </div>
+    <div class="examples_image">
+      <%= image_tag example.url %>
+    </div>
+  </div>
 <% end %>
+
