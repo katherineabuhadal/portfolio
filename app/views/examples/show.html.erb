@@ -3,5 +3,6 @@
 <p>
 <h4><%= @example.description %></h4>
 <div><%= image_tag @example.url %></div>
+<div><%=  @example.trello %></div>
 <%= link_to "Edit", [:edit, @example] %>
 <%= link_to "Delete", @example, method: :delete %>

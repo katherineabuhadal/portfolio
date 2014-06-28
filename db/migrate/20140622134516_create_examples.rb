@@ -4,6 +4,7 @@ class CreateExamples < ActiveRecord::Migration
       t.string :title, null: false
       t.text :description
       t.string :url
+      t.string :trello
 
       t.timestamps
     end

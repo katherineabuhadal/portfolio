@@ -1,3 +1,3 @@
-class User 
-  blogs
+class User < ActiveRecord::Base
+  
 end

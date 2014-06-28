@@ -13,17 +13,15 @@
  *= require_tree .
  *= require_self
  */
-
+@import "bourbon";
+@import "neat";
 body {
   font-family: Helvetica;
   
 }
 
 #container {
-  width: 80em;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 2em;
+@include outer-container;
 }
 
 a {
@@ -36,21 +34,23 @@ a:hover {
 }
 
 #header {
+  @include span-columns(12);
 }
 
 
 #logo {
-  height: 8em;
-  background: red;
   float: left;
 }
 
 .menu {
  float: right;
+ margin-right: .3em;
+
 }
 
 .nav_menu {
   font-size: 2em;
+ padding: 2em;
 }
 
 li {
@@ -71,7 +71,7 @@ opacity: 0.4;
 }
 
 .examples_image {
-  width: 25.5em;
+  width: 21em;
   height: 20em;
   margin-right: 1em;
   background: gray;

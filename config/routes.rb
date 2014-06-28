@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
  root to:"examples#index" 
  resources :examples, only: [:new, :show, :create, :edit, :update, :destroy]
+ resources :users, only: [:new, :create]
+ resource :session, only: [:new, :create, :destroy]
+ 
  # Example resource route (maps HTTP verbs to controller actions automatically):
   #   resources :products
 
