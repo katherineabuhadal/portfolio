@@ -18,9 +18,13 @@ def create
 end
 
 def edit
+  @example = Example.find(params[:id])
 end
 
 def update
+  @example = Example.find(params[:id])
+  @example.update(example_params)
+redirect_to root_path
 end
 
 def destroy
