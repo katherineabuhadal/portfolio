@@ -10,28 +10,20 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
- *= require_tree .
  *= require_self
  */
+
 @import "bourbon";
 @import "neat";
+@import "base/base";
+
 body {
-  font-family: Helvetica;
-  
 }
 
 #container {
-@include outer-container;
+  @include outer-container;
 }
 
-a {
-  text-decoration: none;
-  color: black;
-}
-
-a:hover {
-  color: #CCFF33;
-}
 
 #header {
   @include span-columns(12);
@@ -43,14 +35,14 @@ a:hover {
 }
 
 .menu {
- float: right;
- margin-right: .3em;
+  float: right;
+  margin-right: .3em;
 
 }
 
 .nav_menu {
   font-size: 2em;
- padding: 2em;
+  padding: 2em;
 }
 
 li {
@@ -66,8 +58,8 @@ li {
 }
 
 .examples_title {
-font-size: 1.5em;
-opacity: 0.4;
+  font-size: 1.5em;
+  opacity: 0.4;
 }
 
 .examples_image {
@@ -86,7 +78,3 @@ opacity: 0.4;
 p {
   font-size: 1em;
 }
-
-
-
-

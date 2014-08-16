@@ -13,34 +13,37 @@
     <div id="logo">
       <%= link_to "[my_logo]", "/" %>
     </div>
-
-    <div class="menu">
-      <ul class="nav_menu">
-        <li class ="menu_link"><%= link_to "Articles", "/blog" %></li>
-        <li class ="menu_link"><%= link_to "Contact", "/contact" %></li>
-        <li class ="menu_link"><%= link_to "Resume", "/resume" %></li>
-      </ul>
-    </div>
-
     <div>
+      <h4>{form follows function}</h4>
+      </div>
 
-      <% if signed_in? %>
-        <%= button_to "Sign out", :session, method: :delete %>
-    <% else %>
-        <% unless controller_name == "users" && action_name == "new" %>
+      <div class="menu">
+        <ul class="nav_menu">
+          <li class ="menu_link"><%= link_to "Articles", "/blog" %></li>
+          <li class ="menu_link"><%= link_to "Contact", "/contact" %></li>
+          <li class ="menu_link"><%= link_to "Resume", "/resume" %></li>
+        </ul>
+      </div>
+
+      <div>
+
+        <% if signed_in? %>
+          <%= button_to "Sign out", :session, method: :delete %>
+      <% else %>
+          <% unless controller_name == "users" && action_name == "new" %>
+        <% end %>
+        <%= link_to "Sign up", [:new, :user] %>
+        <%= link_to "Sign in", [:new, :session] %>
       <% end %>
-      <%= link_to "Sign up", [:new, :user] %>
-      <%= link_to "Sign in", [:new, :session] %>
-    <% end %>
 
+      </div>
     </div>
+
+
+
+
+
+    <%= yield %>
   </div>
-
-
-
-
-
-  <%= yield %>
-</div>
-</body>
-</html>
+  </body>
+  </html>
